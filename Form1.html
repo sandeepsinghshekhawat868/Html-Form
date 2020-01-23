@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Indian Oil Registration Form</title>
+<h1>Indian Oil Registration Form</h1>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<form>
+<label for="exampleInputName1">Name:</label>
+<input type="text" class="form-control" id="exampleInputName1" 
+maxlength="32" style="width: 33.3333%;"  pattern="[A-Za-z]{1,32}" title="Enter Name having alphabets only and must have one upper case." placeholder="Enter Name" > 
+
+
+</div>
+<div style="float:right">
+<input type='file' />
+<br><img id="myImg" src="#" alt="your image" height=200 width=100>
+</div>
+
+<script>
+window.addEventListener('load', function() {
+  document.querySelector('input[type="file"]').addEventListener('change', function() {
+      if (this.files && this.files[0]) {
+          var img = document.querySelector('img');  // $('img')[0]
+          img.src = URL.createObjectURL(this.files[0]); // set src to blob url
+          img.onload = imageIsLoaded;
+      }
+  });
+});
+
+function imageIsLoaded() {
+  alert(this.src);  // blob url
+  // update width and height ...
+}
+</script>
+
+
+
+<div class="form-group">
+<label for="exampleInputNumber1">Phone Number:</label>
+<input type="text" class="form-control" id="exampleInputNumber1" style="width: 33.3333%;" 
+pattern="[7-9]{1}[0-9]{9}" title="Number should starts from 7,8,9 and must have 10 digits."  placeholder="Enter Phone Number" required> 
+</div>
+
+<div class="form-group">
+<label for="exampleInputEmail1">Email Address:</label>
+<input type="text" class="form-control" id="exampleInputEmail1"  style="width: 33.3333%;"
+pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+title="Must start with alphabets and then have digits from 1-9 and must contain @ sign and then mail protocol after it have . and word of 2 to 4 letters. "
+placeholder="Enter Email"> 
+</div>
+
+<div class="form-group">
+<label for="exampleInputPassword1">Password:</label>
+<input type="password" class="form-control" id="exampleInputPassword1" style="width: 33.3333%;"
+pattern="(?=,*\d)(?=,*[a-z])(?=,*[A-Z],{8,})" 
+title="Must have one Upper Case and One Lower Case and have 8 digits or more."  placeholder="Password">
+</div>
+
+
+<div class="form-group">
+<label for="exampleInputPassword2">Confirm Password:</label>
+<input type="password" class="form-control" id="exampleInputPassword2" style="width: 33.3333%;" 
+pattern="(?=,*\d)(?=,*[a-z])(?=,*[A-Z],{8,})" placeholder="Confirm Password">
+</div>
+
+<label for="exampleInputGender">Gender:</label><br>
+<input type="radio" name="Gender" value="Male">Male<br>
+<input type="radio" name="Gender" value="Female">Female<br>
+  
+
+
+
+
+<div class="form-check">
+<input type="checkbox" class="form-check-input" id="exampleCheck1">
+<label class="form-check-label" for="exampleCheck1">Check Form</label>
+</div>
+
+
+<button type="Ok" class="btn btn-primary">Ok</button>
+<button type="Cancel" class="btn btn-primary">Cancel</button>
+<button type="Reset" class="btn btn-primary">Reset</button>
+</form>
+</html>
+

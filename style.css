@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color: blue;
+    font-style: Bold;
+    font-size: 24;
+    background-color:LightCyan;
+}
+
+
+form{
+    align: center;
+    text-align: left;
+    color: Black;
+    border:solid ;
+    border-color:skyblue;
+    background-color:LightPink;
+    font-size: 14;
+    float:inherit;
+}
+script{
+    image-orientation:right;
+}
